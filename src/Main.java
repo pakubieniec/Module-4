@@ -1,17 +1,37 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        int[] array = {2,5,8,12,35};
+        int[] array2 = {4,8,123,45,90,12,67};
+        SumArray a1 = new SumArray();
+        System.out.println(a1.sumArray(array));
+        System.out.println(a1.sumArray(array2));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        CountWords sentence = new CountWords();
+        sentence.countWords("Lorem ipsum, domit es ipsum it");
+
+
+        //Zadanie 4
+        Student s1 = new Student(24, 189, "Marek", "Mickiewicz");
+        Student s2 = new Student(21, 162, "Anna", "Kowalska");
+        Student s3 = new Student(19, 173, "Genowefa", "Pigwa");
+        Student s4 = new Student(25, 180, "Nikodem", "Dyzma");
+        Student s5 = new Student(38, 193, "Adam", "Zagłoba");
+
+        ArrayList<Student> studentsList = new ArrayList<>();
+        studentsList.add(s1);
+        studentsList.add(s2);
+        studentsList.add(s3);
+        studentsList.add(s4);
+        studentsList.add(s5);
+
+        for(Student s : studentsList){
+            System.out.println(s.toString());
+        }
+
+        System.out.println();
         }
     }
-}
